@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>創造亞當貓貓環保袋 - 藝貓名畫環保袋</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome -->
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/v4-shims.min.css" rel="stylesheet">
+  <!-- Tailwind 配置 -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#8b4513',
+            secondary: '#d4af37',
+            neutral: {
+              100: '#f8f5f0',
+              200: '#f0ebe5',
+              800: '#5a4a3a'
+            }
+          },
+          fontFamily: {
+            inter: ['Inter', 'sans-serif'],
+          },
+        },
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+      .mix-blend-multiply {
+        mix-blend-mode: multiply;
+      }
+    }
+  </style>
+  <style>
+    /* 背景樣式 */
+    .bg-pattern {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+    .bg-pattern img {
+      opacity: 0.1;
+      mix-blend-mode: multiply;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+    .bg-base {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #f8f5f0;
+      z-index: -2;
+    }
+    /* 產品圖放大效果 */
+    .product-img:hover {
+      transform: scale(1.02);
+      transition: transform 0.3s ease;
+    }
+  </style>
+</head>
+<body class="font-inter">
+  <!-- 背景模組 -->
+  <div class="bg-base"></div>
+  <div class="bg-pattern">
+    <img src="https://aka.doubaocdn.com/s/4Nhu1w4ww7" alt="背景圖案">
+  </div>
+
+  <!-- 導航欄 -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-3 bg-neutral-100/90 backdrop-blur-sm">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+      <a href="index.html" class="text-primary font-bold text-2xl flex items-center">
+        <i class="fas fa-paint-brush mr-2"></i>
+        <span>藝貓環保袋</span>
+      </a>
+      <div class="hidden md:flex space-x-8">
+        <a href="index.html#home" class="text-primary hover:text-secondary transition-colors">首頁</a>
+        <a href="index.html#products" class="text-primary hover:text-secondary transition-colors">產品</a>
+        <a href="index.html#about" class="text-primary hover:text-secondary transition-colors">關於我們</a>
+        <a href="index.html#reviews" class="text-primary hover:text-secondary transition-colors">客戶評價</a>
+        <a href="index.html#faq" class="text-primary hover:text-secondary transition-colors">常見問題</a>
+      </div>
+      <button class="md:hidden text-primary" id="menuBtn">
+        <i class="fas fa-bars text-xl"></i>
+      </button>
+    </div>
+    <!-- 移動端菜單 -->
+    <div class="md:hidden hidden bg-neutral-100/95 backdrop-blur-sm absolute w-full" id="mobileMenu">
+      <div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
+        <a href="index.html#home" class="text-primary hover:text-secondary transition-colors">首頁</a>
+        <a href="index.html#products" class="text-primary hover:text-secondary transition-colors">產品</a>
+        <a href="index.html#about" class="text-primary hover:text-secondary transition-colors">關於我們</a>
+        <a href="index.html#reviews" class="text-primary hover:text-secondary transition-colors">客戶評價</a>
+        <a href="index.html#faq" class="text-primary hover:text-secondary transition-colors">常見問題</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 產品詳情區 -->
+  <section class="relative z-10 pt-32 pb-20 md:pt-40 md:pb-28">
+    <div class="container mx-auto px-4">
+      <!-- 返回按鈕 -->
+      <a href="index.html#products" class="inline-flex items-center text-primary mb-8 hover:text-secondary transition-colors">
+        <i class="fas fa-arrow-left mr-2"></i>
+        <span>返回產品列表</span>
+      </a>
+
+      <!-- 產品內容 -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <!-- 產品圖片區 -->
+        <div class="bg-white rounded-xl shadow-lg p-6 product-img">
+          <img src="https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/2b79e863f61440bfbd0fa4d3ae824663.png~tplv-a9rns2rl98-24:720:720.png?lk3s=8e244e95&rcl=20260222161444F0DC9C1F3D7CF67D9F24&rrcfp=8a172a1a&x-expires=1772352885&x-signature=gRvBtk8boT695C1JFwJKqZUvEKc%3D" 
+               alt="創造亞當貓貓環保袋" 
+               class="w-full h-auto rounded-lg object-cover" />
+          <div class="mt-4 grid grid-cols-4 gap-2">
+            <!-- 小圖預覽（可點擊切換主圖） -->
+            <img src="https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/2b79e863f61440bfbd0fa4d3ae824663.png~tplv-a9rns2rl98-24:720:720.png?lk3s=8e244e95&rcl=20260222161444F0DC9C1F3D7CF67D9F24&rrcfp=8a172a1a&x-expires=1772352885&x-signature=gRvBtk8boT695C1JFwJKqZUvEKc%3D" 
+                 alt="創造亞當貓貓環保袋細節1" 
+                 class="w-full h-20 object-cover rounded cursor-pointer hover:opacity-80 transition-opacity" />
+            <img src="https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/2b79e863f61440bfbd0fa4d3ae824663.png~tplv-a9rns2rl98-24:720:720.png?lk3s=8e244e95&rcl=20260222161444F0DC9C1F3D7CF67D9F24&rrcfp=8a172a1a&x-expires=1772352885&x-signature=gRvBtk8boT695C1JFwJKqZUvEKc%3D" 
+                 alt="創造亞當貓貓環保袋細節2" 
+                 class="w-full h-20 object-cover rounded cursor-pointer hover:opacity-80 transition-opacity" />
+            <img src="https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/2b79e863f61440bfbd0fa4d3ae824663.png~tplv-a9rns2rl98-24:720:720.png?lk3s=8e244e95&rcl=20260222161444F0DC9C1F3D7CF67D9F24&rrcfp=8a172a1a&x-expires=1772352885&x-signature=gRvBtk8boT695C1JFwJKqZUvEKc%3D" 
+                 alt="創造亞當貓貓環保袋細節3" 
+                 class="w-full h-20 object-cover rounded cursor-pointer hover:opacity-80 transition-opacity" />
+            <img src="https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/2b79e863f61440bfbd0fa4d3ae824663.png~tplv-a9rns2rl98-24:720:720.png?lk3s=8e244e95&rcl=20260222161444F0DC9C1F3D7CF67D9F24&rrcfp=8a172a1a&x-expires=1772352885&x-signature=gRvBtk8boT695C1JFwJKqZUvEKc%3D" 
+                 alt="創造亞當貓貓環保袋細節4" 
+                 class="w-full h-20 object-cover rounded cursor-pointer hover:opacity-80 transition-opacity" />
+          </div>
+        </div>
+
+        <!-- 產品信息區 -->
+        <div>
+          <h1 class="text-[clamp(1.75rem,4vw,2.5rem)] font-bold text-primary mb-4">創造亞當貓貓環保袋</h1>
+          <div class="flex items-center mb-6">
+            <div class="flex text-secondary mr-4">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <span class="text-neutral-800">(189 個評價)</span>
+          </div>
+          
+          <!-- 價格 -->
+          <div class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-secondary mb-8">HKD $119</div>
+          
+          <!-- 加入購物車按鈕 -->
+          <button class="bg-secondary hover:bg-[#b8941f] text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 mb-8 w-full md:w-auto">
+            <i class="fas fa-shopping-cart mr-2"></i> 加入購物車
+          </button>
+
+          <!-- 產品介紹標籤欄 -->
+          <div class="border-b border-neutral-200 mb-6">
+            <ul class="flex space-x-8">
+              <li class="text-primary font-bold border-b-2 border-secondary pb-2 cursor-pointer">產品介紹</li>
+              <li class="text-neutral-800 hover:text-primary pb-2 cursor-pointer">尺寸規格</li>
+              <li class="text-neutral-800 hover:text-primary pb-2 cursor-pointer">設計靈感</li>
+            </ul>
+          </div>
+
+          <!-- 產品介紹內容 -->
+          <div class="space-y-4 text-neutral-800 mb-8">
+            <p>創造亞當貓貓環保袋以米開朗基羅經典穹頂畫《創造亞當》為創作核心，將原作中「神與亞當指尖相觸」的經典瞬間，替換為軟萌貓咪形象，保留原作的經典構圖與藝術張力，打造出兼具文藝氣質與萌趣的環保單品。</p>
+            <p>選用高密12安士帆布製作，耐磨耐髒、透氣環保，高清數碼印花還原原作的光影層次與人物（貓咪）神態，經典的對稱構圖與流動的衣褶線條完美呈現，日常攜帶既能體現環保理念，又能彰顯獨特的藝術審美。</p>
+          </div>
+
+          <!-- 尺寸規格 -->
+          <div class="bg-neutral-100 rounded-xl p-6 mb-8">
+            <h3 class="font-bold text-primary text-xl mb-4">尺寸規格</h3>
+            <ul class="space-y-3 text-neutral-800">
+              <li class="flex justify-between">
+                <span>整體尺寸：</span>
+                <span class="font-bold">40cm × 45cm</span>
+              </li>
+              <li class="flex justify-between">
+                <span>提手長度：</span>
+                <span class="font-bold">25cm</span>
+              </li>
+              <li class="flex justify-between">
+                <span>容納容量：</span>
+                <span class="font-bold">約15L</span>
+              </li>
+              <li class="flex justify-between">
+                <span>材質厚度：</span>
+                <span class="font-bold">12安士帆布</span>
+              </li>
+              <li class="flex justify-between">
+                <span>重量：</span>
+                <span class="font-bold">約200g</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 設計靈感 -->
+          <div class="bg-neutral-100 rounded-xl p-6">
+            <h3 class="font-bold text-primary text-xl mb-4">設計靈感</h3>
+            <p class="text-neutral-800 mb-4">《創造亞當》是文藝復興大師米開朗基羅為梵蒂岡西斯廷禮拜堂穹頂創作的經典壁畫，完成於1512年。這幅作品最經典的瞬間是「神與亞當指尖相觸」——神的手指傳遞生命的力量，亞當的手指慵懶卻充滿渴望，整體構圖對稱、人體比例完美、光影層次豐富，是文藝復興時期人體美學與宗教藝術的巔峰之作。</p>
+            <p class="text-neutral-800">我們以這幅經典壁畫為創作基底，將神與亞當的形象替換為軟萌的貓咪——神貓的指尖輕觸亞當貓的指尖，保留原作的經典構圖、流動的衣褶線條、層次豐富的光影效果，同時以貓咪的可愛神情緩和了原作的莊重感。既致敬了米開朗基羅的藝術成就，又以貓咪元素賦予這幅經典作品新的生命力，讓高冷的文藝復興藝術變得親切可觸，完美契合品牌「藝術融入日常」的初心。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 相關產品推薦 -->
+  <section class="relative z-10 py-16 bg-neutral-200">
+    <div class="container mx-auto px-4">
+      <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-primary mb-2 text-center">相關產品推薦</h2>
+      <div class="w-20 h-1 bg-secondary mx-auto mb-12"></div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- 相關產品1 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+          <img src="https://aka.doubaocdn.com/s/UA7u1w4wuW?alice_filename=American%2520Gothic.png" alt="美式哥特貓貓環保袋" class="w-full h-48 object-cover" />
+          <div class="p-6">
+            <h3 class="font-bold text-primary text-lg mb-2">美式哥特貓貓環保袋</h3>
+            <div class="flex justify-between items-center">
+              <span class="font-bold text-secondary">HKD $119</span>
+              <button class="bg-primary hover:bg-[#6b3510] text-white font-bold py-2 px-4 rounded-lg transition-colors">
+                查看詳情
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- 相關產品2 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+          <img src="https://aka.doubaocdn.com/s/uYO41w4wuW?alice_filename=Girl%2520with%2520a%2520Pearl%2520Earring.png" alt="戴珍珠耳環的貓貓環保袋" class="w-full h-48 object-cover" />
+          <div class="p-6">
+            <h3 class="font-bold text-primary text-lg mb-2">戴珍珠耳環的貓貓環保袋</h3>
+            <div class="flex justify-between items-center">
+              <span class="font-bold text-secondary">HKD $119</span>
+              <button class="bg-primary hover:bg-[#6b3510] text-white font-bold py-2 px-4 rounded-lg transition-colors">
+                查看詳情
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- 相關產品3 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+          <img src="https://aka.doubaocdn.com/s/SBHX1w4wuW?alice_filename=MonoLisa%2520Bag.png" alt="蒙娜麗莎貓貓環保袋" class="w-full h-48 object-cover" />
+          <div class="p-6">
+            <h3 class="font-bold text-primary text-lg mb-2">蒙娜麗莎貓貓環保袋</h3>
+            <div class="flex justify-between items-center">
+              <span class="font-bold text-secondary">HKD $119</span>
+              <button class="bg-primary hover:bg-[#6b3510] text-white font-bold py-2 px-4 rounded-lg transition-colors">
+                查看詳情
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 頁腳 -->
+  <footer class="relative z-10 bg-primary text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <h3 class="font-bold text-xl mb-4 flex items-center">
+            <i class="fas fa-paint-brush mr-2"></i>
+            藝貓環保袋
+          </h3>
+          <p class="mb-4">將藝術與環保結合，打造獨特的日常時尚單品</p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-white hover:text-secondary transition-colors">
+              <i class="fab fa-weibo text-xl"></i>
+            </a>
+            <a href="#" class="text-white hover:text-secondary transition-colors">
+              <i class="fab fa-wechat text-xl"></i>
+            </a>
+            <a href="#" class="text-white hover:text-secondary transition-colors">
+              <i class="fab fa-instagram text-xl"></i>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h3 class="font-bold text-xl mb-4">快速鏈接</h3>
+          <ul class="space-y-2">
+            <li><a href="index.html#home" class="hover:text-secondary transition-colors">首頁</a></li>
+            <li><a href="index.html#products" class="hover:text-secondary transition-colors">產品</a></li>
+            <li><a href="index.html#about" class="hover:text-secondary transition-colors">關於我們</a></li>
+            <li><a href="index.html#reviews" class="hover:text-secondary transition-colors">客戶評價</a></li>
+            <li><a href="index.html#faq" class="hover:text-secondary transition-colors">常見問題</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-bold text-xl mb-4">聯繫我們</h3>
+          <ul class="space-y-2">
+            <li class="flex items-center">
+              <i class="fas fa-envelope mr-2"></i>
+              <span>contact@ecobag-art.com.hk</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-phone mr-2"></i>
+              <span>852-2345-6789</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-map-marker-alt mr-2"></i>
+              <span>香港九龍尖沙咀藝術大道101號</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-white/20 mt-8 pt-8 text-center text-sm">
+        <p>© 2026 藝貓環保袋 版權所有</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // 導航欄滾動效果
+    window.addEventListener('scroll', function() {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('py-2', 'shadow-md');
+        navbar.classList.remove('py-3');
+      } else {
+        navbar.classList.add('py-3');
+        navbar.classList.remove('py-2', 'shadow-md');
+      }
+    });
+
+    // 移動端菜單
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', function() {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // 產品小圖點擊切換主圖
+    const thumbnails = document.querySelectorAll('.cursor-pointer');
+    const mainImage = document.querySelector('.product-img img:first-child');
+    thumbnails.forEach(thumb => {
+      thumb.addEventListener('click', function() {
+        mainImage.src = this.src;
+        mainImage.alt = this.alt;
+      });
+    });
+
+    // 平滑滾動
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          window.scrollTo({
+            top: target.offsetTop - 80,
+            behavior: 'smooth'
+          });
+          mobileMenu.classList.add('hidden');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
